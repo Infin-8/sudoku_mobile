@@ -11,7 +11,6 @@ const { mainContainer, gradient, flatList } = styles;
 export default function HomeScreen() {
   return (
     <>
-      {/* <StatusBar backgroundColor="#000000" style="light" translucent={true} /> */}
       <LinearGradient colors={["white", "#C1E3D5"]} style={gradient}>
         <SafeAreaView style={mainContainer}>
           <Logo />
@@ -19,7 +18,8 @@ export default function HomeScreen() {
             style={{
               justifyContent: "center",
               alignItems: "center",
-              marginBottom: "3%",
+              marginBottom: "5%",
+              flex: "1",
             }}
           >
             <FlatList

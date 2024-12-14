@@ -2,32 +2,22 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   gradient: {
-    flex: 1,
+    height: "100%",
     justifyContent: 'center',
     alignItems: 'center',
   },
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: "flex-start",
     alignItems: 'center',
+    paddingTop: 0,
   },
   mainContainer: {
     flex: 1,
+    flexGrow: 1,
     flexDirection: 'column',
-    borderWidth: 3,
     width: "100%",
-  },
-  startScreenContainer: {
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    height: "100%",
-    width: "100%",
-  },
-  startScreenBtnContainer: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "flex-start",
   },
   text: {
     fontSize: 20,
@@ -57,6 +47,7 @@ const styles = StyleSheet.create({
   },
   flatList: {
     justifyContent: 'space-between',
+    
   },
   logoContainer: {
     justifyContent: 'center',
@@ -92,6 +83,7 @@ const styles = StyleSheet.create({
   spinner: {
     transform: [{ rotate: '12deg' }],
   },
+  marginTop: '0'
 });
 
 export default styles;

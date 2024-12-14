@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, FlatList } from "react-native";
 import styles from "../util/styles";
-const { container, spinner, logo, logoText, logoContainer } = styles;
+const { container, spinner, logo, logoText, logoContainer, marginTop } = styles;
 
 const Logo = () => {
   return (
