@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     width: "100%",
     justifyContent: "flex-start",
+    // backgroundColor: "indigo"
   },
   text: {
     fontSize: 20,
@@ -60,10 +61,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '33%', 
-    height: 170, 
+    width: 125, 
+    height: 130, 
     backgroundColor: [2, 3, 7].includes(i) ? '#c1f0d3' : '#80ffbf',
-    color: 'white',
+    // color: 'red',
     textShadowColor: 'black',
     textShadowOffset: { width: 5, height: 2 },
     textShadowRadius: 5,
