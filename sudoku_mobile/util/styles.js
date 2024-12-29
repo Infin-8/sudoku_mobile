@@ -18,7 +18,11 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     width: "100%",
     justifyContent: "flex-start",
-    // backgroundColor: "indigo"
+  },
+  contentContainer: {
+    width: "100%",
+    marginBottom: "2%",
+    padding: ".25%",
   },
   text: {
     fontSize: 20,
@@ -48,7 +52,7 @@ const styles = StyleSheet.create({
   },
   flatList: {
     justifyContent: 'space-between',
-    
+
   },
   logoContainer: {
     justifyContent: 'center',
@@ -61,10 +65,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    width: 132, 
-    height: 132, 
+    width: 132,
+    height: 132,
     backgroundColor: [2, 3, 7].includes(i) ? '#c1f0d3' : '#80ffbf',
-    // color: 'red',
     textShadowColor: 'black',
     textShadowOffset: { width: 5, height: 2 },
     textShadowRadius: 5,
@@ -75,7 +78,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Arial',
     overflow: 'hidden',
     zIndex: i === 4 ? 999 : 1,
-  }), 
+  }),
   logoText: {
     color: 'white',
     fontSize: 100,
@@ -84,15 +87,24 @@ const styles = StyleSheet.create({
   spinner: {
     transform: [{ rotate: '12deg' }],
   },
-  marginTop: '0', 
+  marginTop: '0',
   boardContainers: {
     display: "flex",
     width: "100%",
     borderWidth: 1,
     borderColor: "red",
     borderStyle: "solid",
-    color: "white"
-
+    color: "white",
+    height: "4%"
+  },
+  tester: {
+    width: "100%",
+    color: "white",
+    fontSize: 24
+  },
+  boardListMain: {
+    flex: 1, 
+    width: "100%" 
   }
 });
 
