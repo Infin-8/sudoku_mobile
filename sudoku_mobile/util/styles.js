@@ -61,8 +61,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    width: 125, 
-    height: 130, 
+    width: 132, 
+    height: 132, 
     backgroundColor: [2, 3, 7].includes(i) ? '#c1f0d3' : '#80ffbf',
     // color: 'red',
     textShadowColor: 'black',
@@ -78,13 +78,22 @@ const styles = StyleSheet.create({
   }), 
   logoText: {
     color: 'white',
-    fontSize: 130,
+    fontSize: 100,
     textAlign: 'center',
   },
   spinner: {
     transform: [{ rotate: '12deg' }],
   },
-  marginTop: '0'
+  marginTop: '0', 
+  boardContainers: {
+    display: "flex",
+    width: "100%",
+    borderWidth: 1,
+    borderColor: "red",
+    borderStyle: "solid",
+    color: "white"
+
+  }
 });
 
 export default styles;

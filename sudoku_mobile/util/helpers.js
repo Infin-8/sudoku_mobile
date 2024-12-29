@@ -4,3 +4,5 @@ export const getStartButtons = () => [
     { filter: "hard", color: "#6ba588", value: "Hard" }     
 ]
 
+
+export const getBoards = () => Array.from({ length: 100 }, (_, i) => (i + 1 ))
