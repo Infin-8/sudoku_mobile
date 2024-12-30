@@ -99,8 +99,8 @@ const styles = StyleSheet.create({
   },
   tester: {
     width: "100%",
-    color: "white",
-    fontSize: 24
+    color: "black",
+    fontSize: 10
   },
   boardListMain: {
     flex: 1, 
