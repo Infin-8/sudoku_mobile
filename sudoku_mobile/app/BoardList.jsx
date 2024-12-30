@@ -1,10 +1,12 @@
 import { Text, View, FlatList } from "react-native";
 import styles from "../util/styles";
 import { getBoards, testString } from "../util/helpers";
-const { boardListMain, boardContainers, contentContainer, tester } = styles;
+const { boardListMain, boardContainers, contentContainer, tester, boardContainerExtras } = styles;
 
 const BoardList = () => (
+
   <View style={boardListMain}>
+
     <FlatList
       contentContainerStyle={{
         paddingHorizontal: 16,
@@ -15,8 +17,7 @@ const BoardList = () => (
         <View
           style={{
             ...boardContainers,
-            width: "100%",
-            marginBottom: 8,
+           ...boardContainerExtras
           }}
         >
           <Text style={tester}>{item}</Text>
@@ -29,6 +30,7 @@ const BoardList = () => (
       rendering
       windowSize={5}
     />
+
   </View>
 );
 

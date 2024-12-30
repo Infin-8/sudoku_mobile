@@ -89,22 +89,32 @@ const styles = StyleSheet.create({
   },
   marginTop: '0',
   boardContainers: {
-    display: "flex",
-    width: "100%",
-    borderWidth: 1,
-    borderColor: "red",
-    borderStyle: "solid",
-    color: "white",
-    height: "4%"
+    flex: 1, // Makes sure the container takes up the available space
+    justifyContent: "center", // Vertically center children within the container
+    alignItems: "center", // Horizontally center children within the container
+    width: "100%", // Ensures it takes full width
+    height: "100%", // Ensures it takes full height (if needed)
   },
   tester: {
-    width: "100%",
+    width: "100%", // Ensures it takes the full width of the parent
+    height: "100%", // Ensures it takes the full height of the parent
     color: "black",
-    fontSize: 10
+    fontSize: 150,
+    display: "flex", // This ensures flexbox is used
+    justifyContent: "center", // Centers text vertically
+    alignItems: "center", // Centers text horizontally
+    textAlign: 'center', // Ensures text is centered horizontally in the Text component itself,
   },
   boardListMain: {
-    flex: 1, 
-    width: "100%" 
+    display: "flex",
+    justifyContent: "space-between",
+    width: "100%",
+  },
+  boardContainerExtras: {
+    width: "100%",
+    marginBottom: 8,
+    borderWidth: 1,
+    borderRadius: 5
   }
 });
 
