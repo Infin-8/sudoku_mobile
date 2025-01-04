@@ -1,6 +1,11 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
+  quickFlex: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
+  },
   gradient: {
     height: "100%",
     justifyContent: 'center',
@@ -21,6 +26,7 @@ const styles = StyleSheet.create({
   },
   contentContainer: {
     width: "100%",
+    height: "100%",
     marginBottom: "2%",
     padding: ".25%",
   },
@@ -89,21 +95,22 @@ const styles = StyleSheet.create({
   },
   marginTop: '0',
   boardContainers: {
-    flex: 1, // Makes sure the container takes up the available space
-    justifyContent: "center", // Vertically center children within the container
-    alignItems: "center", // Horizontally center children within the container
-    width: "100%", // Ensures it takes full width
-    height: "100%", // Ensures it takes full height (if needed)
+    backgroundColor: "whitesmoke",
+    boxShadow: "1px 1px 3px black",
+    flexDirection: "row",
+    flex: 1,
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%",
+    height: "100%",
   },
   tester: {
-    width: "100%", // Ensures it takes the full width of the parent
-    height: "100%", // Ensures it takes the full height of the parent
-    color: "black",
-    fontSize: 150,
-    display: "flex", // This ensures flexbox is used
-    justifyContent: "center", // Centers text vertically
-    alignItems: "center", // Centers text horizontally
-    textAlign: 'center', // Ensures text is centered horizontally in the Text component itself,
+    width: "25%",
+    height: "100%",  // Ensure the container takes up the full height of its parent
+    display: "flex",
+    justifyContent: "center",  // Vertically center the content
+    alignItems: "center",      // Horizontally center the content
+    borderWidth: 1,
   },
   boardListMain: {
     display: "flex",
@@ -112,7 +119,7 @@ const styles = StyleSheet.create({
   },
   boardContainerExtras: {
     width: "100%",
-    marginBottom: 8,
+    marginBottom: 15,
     borderWidth: 1,
     borderRadius: 5
   }
