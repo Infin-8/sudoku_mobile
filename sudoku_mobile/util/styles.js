@@ -106,10 +106,10 @@ const styles = StyleSheet.create({
   },
   tester: {
     width: "25%",
-    height: "100%",  // Ensure the container takes up the full height of its parent
+    height: "100%",  
     display: "flex",
-    justifyContent: "center",  // Vertically center the content
-    alignItems: "center",      // Horizontally center the content
+    justifyContent: "center",  
+    alignItems: "center",      
     borderWidth: 1,
   },
   boardListMain: {
@@ -122,6 +122,13 @@ const styles = StyleSheet.create({
     marginBottom: 15,
     borderWidth: 1,
     borderRadius: 5
+  },
+  playButton: {
+    width: 75,
+    height: 40,
+    backgroundColor: "mintcream",
+    justifyContent: "center",
+    borderRadius: "10px",
   }
 });
 

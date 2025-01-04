@@ -5,9 +5,9 @@ const {
   boardListMain,
   boardContainers,
   contentContainer,
-  button,
   boardContainerExtras,
   quickFlex,
+  playButton,
 } = styles;
 
 const BoardList = () => (
@@ -19,6 +19,7 @@ const BoardList = () => (
       style={contentContainer}
       data={getBoards()}
       renderItem={({ index }) => (
+        
         <View
           style={{
             ...boardContainers,
@@ -41,13 +42,11 @@ const BoardList = () => (
           </View>
 
           <View style={quickFlex}>
-            <TouchableOpacity
-              style={{ width: 75, height: 40, backgroundColor: "mintcream", justifyContent: "center", borderRadius: "10px"}}
-              activeOpacity={0.6}
-            >
-              <Text style={{textAlign: "center" }}>{`Play`}</Text>
+            <TouchableOpacity style={playButton} activeOpacity={0.6}>
+              <Text style={{ textAlign: "center" }}>{`Play`}</Text>
             </TouchableOpacity>
           </View>
+
         </View>
       )}
       keyExtractor={({ item }) => testString(item)}
