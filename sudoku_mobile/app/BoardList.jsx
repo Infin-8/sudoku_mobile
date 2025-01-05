@@ -11,6 +11,7 @@ const {
 } = styles;
 
 const BoardList = () => (
+  
   <View style={boardListMain}>
     <FlatList
       contentContainerStyle={{
@@ -19,7 +20,6 @@ const BoardList = () => (
       style={contentContainer}
       data={getBoards()}
       renderItem={({ index }) => (
-        
         <View
           style={{
             ...boardContainers,
@@ -46,7 +46,6 @@ const BoardList = () => (
               <Text style={{ textAlign: "center" }}>{`Play`}</Text>
             </TouchableOpacity>
           </View>
-
         </View>
       )}
       keyExtractor={({ item }) => testString(item)}
