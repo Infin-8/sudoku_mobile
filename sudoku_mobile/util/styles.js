@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   marginTop: '0',
   boardContainers: {
     backgroundColor: "whitesmoke",
-    boxShadow: "1px 1px 3px black",
+    boxShadow: "1px 2px 4px black",
     flexDirection: "row",
     flex: 1,
     justifyContent: "space-between",
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",  
     alignItems: "center",      
-    borderWidth: 1,
+    borderWidth: 0,
   },
   boardListMain: {
     display: "flex",
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
   boardContainerExtras: {
     width: "100%",
     marginBottom: 15,
-    borderWidth: 1,
+    borderWidth: 0,
     borderRadius: 5
   },
   playButton: {
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     height: 40,
     backgroundColor: "mintcream",
     justifyContent: "center",
-    borderRadius: "10px",
+    borderRadius: 7,
   }
 });
 
