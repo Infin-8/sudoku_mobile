@@ -3,7 +3,7 @@ import styles from "../util/styles";
 const { board, boardEffects } = styles;
 
 const BoardGrid = ({ length, fontSize, columns, tools = false }) => (
-  <View style={boardEffects}>
+  <View style={boardEffects(tools)}>
     <FlatList
       data={Array.from({ length }, (_, i) => i + 1)}
       renderItem={({ item }) => (

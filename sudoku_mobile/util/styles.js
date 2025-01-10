@@ -153,19 +153,21 @@ const styles = StyleSheet.create({
       ].includes(num - 1)
         ? "#99ffcc"
         : "white",
+
   }),
   boardText: {
-    fontSize: 125, 
-    textAlign: "center", 
-    color: "white",     
+    fontSize: 125,
+    textAlign: "center",
+    color: "white",
     textShadowColor: "black",
-    textShadowOffset: {width: 3, height: 3},
+    textShadowOffset: { width: 3, height: 3 },
     textShadowRadius: 5
-    },
-    boardEffects: {
-      boxShadow: "1px 2px 6px black", 
-      width: "96.5%"
-    }
+  },
+  boardEffects: (tools = false) => ({
+    boxShadow: "1px 2px 6px black",
+    width: "96.5%",
+    marginBottom: tools ? null : "10%"
+  })
 });
 
 export default styles;
