@@ -1,6 +1,10 @@
 import { FlatList, TouchableOpacity, Text, View } from "react-native";
 import styles from "../util/styles";
-const { board, boardEffects } = styles;
+const {
+  board,
+  boardEffects,
+  quickFlex: { justifyContent, alignItems },
+} = styles;
 
 const BoardGrid = ({ length, fontSize, columns, tools = false }) => (
   <View style={boardEffects(tools)}>
@@ -14,8 +18,8 @@ const BoardGrid = ({ length, fontSize, columns, tools = false }) => (
       keyExtractor={(item) => item.toString()}
       numColumns={columns}
       contentContainerStyle={{
-        justifyContent: "center",
-        alignItems: "center",
+        justifyContent,
+        alignItems,
       }}
     />
   </View>
