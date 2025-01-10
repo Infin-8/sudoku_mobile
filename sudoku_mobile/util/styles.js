@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     height: 40,
     backgroundColor: "mintcream",
     justifyContent: "center",
-    borderRadius: 7,
+    borderRadius: 6,
   },
   boardContainer: {
     flex: 1,
@@ -167,7 +167,14 @@ const styles = StyleSheet.create({
     boxShadow: "1px 2px 6px black",
     width: "96.5%",
     marginBottom: tools ? null : "10%"
-  })
+  }),
+  miniGridContainer: {
+    height: 180,
+    borderWidth: 1,
+    borderTopStartRadius: 6,
+    borderBottomLeftRadius: 6,
+    width: "25%",
+  }
 });
 
 export default styles;

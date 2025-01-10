@@ -8,6 +8,7 @@ const {
   boardContainerExtras,
   quickFlex,
   playButton,
+  miniGridContainer
 } = styles;
 
 import { useRouter } from "expo-router";
@@ -32,9 +33,7 @@ const BoardList = () => {
           >
             <View
               style={{
-                height: 180,
-                borderWidth: 1,
-                width: "25%",
+                ...miniGridContainer,
                 ...quickFlex,
               }}
             >
