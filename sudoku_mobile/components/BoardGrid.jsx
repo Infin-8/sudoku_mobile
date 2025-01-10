@@ -1,9 +1,9 @@
 import { FlatList, TouchableOpacity, Text, View } from "react-native";
 import styles from "../util/styles";
-const { board } = styles;
+const { board, boardEffects } = styles;
 
 const BoardGrid = ({ length, fontSize, columns, tools = false }) => (
-  <View style={{ boxShadow: "1px 2px 6px black", width: "94%" }}>
+  <View style={boardEffects}>
     <FlatList
       data={Array.from({ length }, (_, i) => i + 1)}
       renderItem={({ item }) => (

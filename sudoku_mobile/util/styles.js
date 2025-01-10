@@ -132,7 +132,9 @@ const styles = StyleSheet.create({
   },
   boardContainer: {
     flex: 1,
-    justifyContent: "space-around"
+    justifyContent: "space-around",
+    backgroundColor: "mintcream",
+    alignItems: "center",
   },
   board: (num, tools = false) => ({
     justifyContent: "center",
@@ -151,7 +153,19 @@ const styles = StyleSheet.create({
       ].includes(num - 1)
         ? "#99ffcc"
         : "white",
-  })
+  }),
+  boardText: {
+    fontSize: 125, 
+    textAlign: "center", 
+    color: "white",     
+    textShadowColor: "black",
+    textShadowOffset: {width: 3, height: 3},
+    textShadowRadius: 5
+    },
+    boardEffects: {
+      boxShadow: "1px 2px 6px black", 
+      width: "96.5%"
+    }
 });
 
 export default styles;
