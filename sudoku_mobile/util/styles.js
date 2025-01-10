@@ -106,10 +106,10 @@ const styles = StyleSheet.create({
   },
   tester: {
     width: "25%",
-    height: "100%",  
+    height: "100%",
     display: "flex",
-    justifyContent: "center",  
-    alignItems: "center",      
+    justifyContent: "center",
+    alignItems: "center",
     borderWidth: 0,
   },
   boardListMain: {
@@ -129,7 +129,29 @@ const styles = StyleSheet.create({
     backgroundColor: "mintcream",
     justifyContent: "center",
     borderRadius: 7,
-  }
+  },
+  boardContainer: {
+    flex: 1,
+    justifyContent: "space-around"
+  },
+  board: (num, tools = false) => ({
+    justifyContent: "center",
+    alignItems: "center",
+    height: 44,
+    width: 44,
+    margin: 1,
+    borderWidth: 1,
+    borderColor: "#999",
+    backgroundColor: tools
+      ? "#99ffcc"
+      : [
+        3, 4, 5, 12, 13, 14, 21, 22, 23, 27, 28, 29, 35, 34, 33, 36, 37,
+        38, 43, 42, 44, 45, 46, 47, 51, 52, 53, 57, 58, 59, 66, 67, 68,
+        75, 76, 77,
+      ].includes(num - 1)
+        ? "#99ffcc"
+        : "white",
+  })
 });
 
 export default styles;

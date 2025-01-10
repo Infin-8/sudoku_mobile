@@ -10,52 +10,61 @@ const {
   playButton,
 } = styles;
 
-const BoardList = () => (
-  
-  <View style={boardListMain}>
-    <FlatList
-      contentContainerStyle={{
-        paddingHorizontal: 16,
-      }}
-      style={contentContainer}
-      data={getBoards()}
-      renderItem={({ index }) => (
-        <View
-          style={{
-            ...boardContainers,
-            ...boardContainerExtras,
-          }}
-        >
+import { useRouter } from "expo-router";
+
+const BoardList = () => {
+  const router = useRouter();
+
+  return (
+    <View style={boardListMain}>
+      <FlatList
+        contentContainerStyle={{
+          paddingHorizontal: 16,
+        }}
+        style={contentContainer}
+        data={getBoards()}
+        renderItem={({ index }) => (
           <View
             style={{
-              height: 180,
-              borderWidth: 1,
-              width: "25%",
-              ...quickFlex,
+              ...boardContainers,
+              ...boardContainerExtras,
             }}
           >
-            <Text>{`Level-${parseInt(index) + 1}`}</Text>
-          </View>
+            <View
+              style={{
+                height: 180,
+                borderWidth: 1,
+                width: "25%",
+                ...quickFlex,
+              }}
+            >
+              <Text>{`Level-${parseInt(index) + 1}`}</Text>
+            </View>
 
-          <View style={quickFlex}>
-            <Text>{`Playing Since...`}</Text>
-          </View>
+            <View style={quickFlex}>
+              <Text>{`Playing Since...`}</Text>
+            </View>
 
-          <View style={quickFlex}>
-            <TouchableOpacity style={playButton} activeOpacity={0.6}>
-              <Text style={{ textAlign: "center" }}>{`Play`}</Text>
-            </TouchableOpacity>
+            <View style={quickFlex}>
+              <TouchableOpacity
+                style={playButton}
+                activeOpacity={0.6}
+                onPress={() => router.push(`/Board`)}
+              >
+                <Text style={{ textAlign: "center" }}>{`Play`}</Text>
+              </TouchableOpacity>
+            </View>
           </View>
-        </View>
-      )}
-      keyExtractor={({ item }) => testString(item)}
-      initialNumToRender={10}
-      maxToRenderPerBatch={10}
-      excessive
-      rendering
-      windowSize={5}
-    />
-  </View>
-);
+        )}
+        keyExtractor={({ item }) => testString(item)}
+        initialNumToRender={10}
+        maxToRenderPerBatch={10}
+        excessive
+        rendering
+        windowSize={5}
+      />
+    </View>
+  );
+};
 
 export default BoardList;
