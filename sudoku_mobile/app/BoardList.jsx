@@ -1,6 +1,8 @@
 import { Text, View, FlatList, TouchableOpacity } from "react-native";
-import styles from "../util/styles";
+import { LinearGradient } from "expo-linear-gradient";
 import { getBoards, testString } from "../util/helpers";
+import { useRouter } from "expo-router";
+import styles from "../util/styles";
 const {
   boardListMain,
   boardContainers,
@@ -8,15 +10,15 @@ const {
   boardContainerExtras,
   quickFlex,
   playButton,
-  miniGridContainer
+  miniGridContainer,
+  gradient
 } = styles;
-
-import { useRouter } from "expo-router";
 
 const BoardList = () => {
   const router = useRouter();
 
   return (
+    <LinearGradient colors={["white", "#C1E3D5"]} style={gradient}>
     <View style={boardListMain}>
       <FlatList
         contentContainerStyle={{
@@ -63,6 +65,7 @@ const BoardList = () => {
         windowSize={5}
       />
     </View>
+    </LinearGradient>
   );
 };
 

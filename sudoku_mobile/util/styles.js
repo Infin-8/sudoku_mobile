@@ -116,6 +116,7 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "space-between",
     width: "100%",
+    marginTop: "2%"
   },
   boardContainerExtras: {
     width: "100%",
@@ -133,7 +134,6 @@ const styles = StyleSheet.create({
   boardContainer: {
     flex: 1,
     justifyContent: "space-around",
-    backgroundColor: "mintcream",
     alignItems: "center",
   },
   board: (num, tools = false) => ({

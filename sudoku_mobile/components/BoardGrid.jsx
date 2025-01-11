@@ -6,23 +6,37 @@ const {
   quickFlex: { justifyContent, alignItems },
 } = styles;
 
-const BoardGrid = ({ length, fontSize, columns, tools = false }) => (
-  <View style={boardEffects(tools)}>
-    <FlatList
-      data={Array.from({ length }, (_, i) => i + 1)}
-      renderItem={({ item }) => (
-        <TouchableOpacity style={board(item, tools)}>
-          <Text style={{ fontSize }}>{item}</Text>
-        </TouchableOpacity>
-      )}
-      keyExtractor={(item) => item.toString()}
-      numColumns={columns}
-      contentContainerStyle={{
-        justifyContent,
-        alignItems,
-      }}
-    />
-  </View>
-);
+const BoardGrid = ({
+  data,
+  length,
+  fontSize,
+  columns,
+  tools = false,
+  handleInput = (f) => f,
+}) => {
+  return (
+    <View style={boardEffects(tools)}>
+      <FlatList
+        data={tools ? Array.from({ length }, (_, i) => i + 1) : data}
+        renderItem={({ item, index }) => (
+          <TouchableOpacity
+            style={board(index + 1, tools)}
+            onPress={(e) => {
+              handleInput(e, item, tools, index);
+            }}
+          >
+            <Text style={{ fontSize }}>{item}</Text>
+          </TouchableOpacity>
+        )}
+        keyExtractor={(item, i) => i.toString()}
+        numColumns={columns}
+        contentContainerStyle={{
+          justifyContent,
+          alignItems,
+        }}
+      />
+    </View>
+  );
+};
 
 export default BoardGrid;

@@ -4,7 +4,6 @@ import { LinearGradient } from "expo-linear-gradient";
 import { getStartButtons } from "../util/helpers";
 import DifficultyButton from "../components/DIfficultyButton";
 import Logo from "../components/Logo";
-import { StatusBar } from "expo-status-bar";
 import { SafeAreaView } from "react-native-safe-area-context";
 const { mainContainer, gradient, flatList } = styles;
 

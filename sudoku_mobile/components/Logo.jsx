@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, FlatList } from "react-native";
 import styles from "../util/styles";
-const { container, spinner, logo, logoText, logoContainer, marginTop } = styles;
+const { container, spinner, logo, logoText, logoContainer } = styles;
 
 const Logo = () => {
   return (
@@ -14,7 +14,7 @@ const Logo = () => {
             <Text style={logoText}>{item}</Text>
           </View>
         )}
-        keyExtractor={(item, index) => index.toString()}
+        keyExtractor={(_, index) => index.toString()}
         contentContainerStyle={logoContainer}
       />
     </View>
