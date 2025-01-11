@@ -3,7 +3,6 @@ import { SafeAreaView, Text } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import BoardGrid from "../components/BoardGrid";
 import styles from "../util/styles";
-import { setConstantValue } from "typescript";
 const { boardContainer, boardText, gradient } = styles;
 
 const Board = () => {

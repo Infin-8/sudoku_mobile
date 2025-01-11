@@ -1,20 +1,19 @@
 import React from "react";
 import { TouchableOpacity, Text } from "react-native";
-import { useRouter } from 'expo-router';
+import { useRouter } from "expo-router";
 import styles from "../util/styles";
+const { DifficultyButtonText, button } = styles;
 
-const DifficultyButton = ({ onPress, title, color }) => {
+const DifficultyButton = ({ title, backgroundColor }) => {
   const router = useRouter();
 
   return (
     <TouchableOpacity
-      style={{ ...styles.button, backgroundColor: color }}
+      style={{ ...button, backgroundColor }}
       activeOpacity={0.6}
       onPress={() => router.push(`/BoardList?diff=${title.toLowerCase()}`)}
     >
-      <Text style={{ fontSize: 25, color: "white", textAlign: "center" }}>
-        {title}
-      </Text>
+      <Text style={DifficultyButtonText}>{title}</Text>
     </TouchableOpacity>
   );
 };

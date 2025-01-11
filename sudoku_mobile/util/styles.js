@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import DifficultyButton from '../components/DIfficultyButton';
 
 const styles = StyleSheet.create({
   quickFlex: {
@@ -130,6 +131,11 @@ const styles = StyleSheet.create({
     backgroundColor: "mintcream",
     justifyContent: "center",
     borderRadius: 6,
+  },
+  DifficultyButtonText: {
+    fontSize: 25,
+    color: "white",
+    textAlign: "center"
   },
   boardContainer: {
     flex: 1,
