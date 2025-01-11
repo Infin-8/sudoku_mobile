@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 6,
   },
-  DifficultyButtonText: {
+  diffBtnText: {
     fontSize: 25,
     color: "white",
     textAlign: "center"
