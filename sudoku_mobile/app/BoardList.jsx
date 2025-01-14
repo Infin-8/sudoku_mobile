@@ -14,14 +14,12 @@ const {
   gradient,
 } = styles;
 
-import appwrite from "../server/appwrite";
 
 const BoardList = () => {
   const router = useRouter();
 
   return (
     <>
-      {/* {console.log("appwrite", appwrite)} */}
       <LinearGradient colors={["white", "#C1E3D5"]} style={gradient}>
         <View style={boardListMain}>
           <FlatList
