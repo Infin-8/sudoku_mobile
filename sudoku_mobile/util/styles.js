@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import DifficultyButton from '../components/DIfficultyButton';
 
 const styles = StyleSheet.create({
   startScreenBtn: {
