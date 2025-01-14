@@ -7,6 +7,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import styles from "../util/styles";
 const { mainContainer, gradient, flatList, subContainer } = styles;
 
+
 export default function HomeScreen() {
   return (
     <>

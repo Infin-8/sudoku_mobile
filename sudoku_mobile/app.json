@@ -9,6 +9,7 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
+      "package": "com.sudoku_mobile.app",
       "supportsTablet": true
     },
     "android": {

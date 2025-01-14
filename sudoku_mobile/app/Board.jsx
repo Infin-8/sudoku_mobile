@@ -30,9 +30,9 @@ const Board = () => {
 
   return (
     <>
-      {console.log("current", currentNum)}
-      {console.log("matrix", matrix)}
-      {console.log("isSelected", isSelected)}
+      {/* {console.log("current", currentNum)} */}
+      {/* {console.log("matrix", matrix)} */}
+      {/* {console.log("isSelected", isSelected)} */}
 
       <LinearGradient colors={["white", "#C1E3D5"]} style={gradient}>
         <SafeAreaView style={boardContainer}>
