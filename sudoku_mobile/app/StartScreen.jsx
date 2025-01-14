@@ -1,11 +1,11 @@
-import styles from "../util/styles";
 import { View, FlatList } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { getStartButtons } from "../util/helpers";
 import DifficultyButton from "../components/DIfficultyButton";
 import Logo from "../components/Logo";
 import { SafeAreaView } from "react-native-safe-area-context";
-const { mainContainer, gradient, flatList } = styles;
+import styles from "../util/styles";
+const { mainContainer, gradient, flatList, subContainer } = styles;
 
 export default function HomeScreen() {
   return (
@@ -13,14 +13,7 @@ export default function HomeScreen() {
       <LinearGradient colors={["white", "#C1E3D5"]} style={gradient}>
         <SafeAreaView style={mainContainer}>
           <Logo />
-          <View
-            style={{
-              justifyContent: "center",
-              alignItems: "center",
-              marginBottom: "5%",
-              flex: "1",
-            }}
-          >
+          <View style={subContainer}>
             <FlatList
               contentContainerStyle={flatList}
               data={getStartButtons()}

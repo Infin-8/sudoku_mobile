@@ -2,6 +2,11 @@ import { StyleSheet } from 'react-native';
 import DifficultyButton from '../components/DIfficultyButton';
 
 const styles = StyleSheet.create({
+  startScreenBtn: {
+    fontSize: 25,
+    color: "white",
+    textAlign: "center"
+  },
   quickFlex: {
     flex: 1,
     justifyContent: "center",
@@ -24,6 +29,12 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     width: "100%",
     justifyContent: "flex-start",
+  },
+  subContainer: {
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: "5%",
+    flex: "1",
   },
   contentContainer: {
     width: "100%",
@@ -142,7 +153,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     alignItems: "center",
   },
-  board: (num, tools = false) => ({
+  board: (index, tools = false, isSelected = null) => ({
     justifyContent: "center",
     alignItems: "center",
     height: 44,
@@ -150,15 +161,17 @@ const styles = StyleSheet.create({
     margin: 1,
     borderWidth: 1,
     borderColor: "#999",
-    backgroundColor: tools
-      ? "#99ffcc"
-      : [
-        3, 4, 5, 12, 13, 14, 21, 22, 23, 27, 28, 29, 35, 34, 33, 36, 37,
-        38, 43, 42, 44, 45, 46, 47, 51, 52, 53, 57, 58, 59, 66, 67, 68,
-        75, 76, 77,
-      ].includes(num - 1)
+    backgroundColor: isSelected?.currentNum === index + 1 && tools
+      ? "white"
+      : tools
         ? "#99ffcc"
-        : "white",
+        : [
+          3, 4, 5, 12, 13, 14, 21, 22, 23, 27, 28, 29, 35, 34, 33, 36, 37,
+          38, 43, 42, 44, 45, 46, 47, 51, 52, 53, 57, 58, 59, 66, 67, 68,
+          75, 76, 77,
+        ].includes(index)
+          ? "#99ffcc"
+          : "white",
 
   }),
   boardText: {

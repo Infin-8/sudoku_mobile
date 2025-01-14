@@ -12,6 +12,7 @@ const BoardGrid = ({
   fontSize,
   columns,
   tools = false,
+  isSelected = null,
   handleInput = (f) => f,
 }) => {
   return (
@@ -20,7 +21,7 @@ const BoardGrid = ({
         data={tools ? Array.from({ length }, (_, i) => i + 1) : data}
         renderItem={({ item, index }) => (
           <TouchableOpacity
-            style={board(index + 1, tools)}
+            style={board(index, tools, isSelected)}
             onPress={(e) => {
               handleInput(e, item, tools, index);
             }}
@@ -28,7 +29,7 @@ const BoardGrid = ({
             <Text style={{ fontSize }}>{item}</Text>
           </TouchableOpacity>
         )}
-        keyExtractor={(item, i) => i.toString()}
+        keyExtractor={(_, i) => i.toString()}
         numColumns={columns}
         contentContainerStyle={{
           justifyContent,
