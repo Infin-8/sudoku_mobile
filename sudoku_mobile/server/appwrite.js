@@ -1,4 +1,4 @@
-import { Client, Account } from "appwrite";
+import { Client, Account, ID } from "appwrite";
 
 const server = (function () {
 
@@ -8,7 +8,7 @@ const server = (function () {
         .setEndpoint('https://cloud.appwrite.io/v1')
         .setProject('6785db7d00238518c0a9');
 
-    return { client, Account }
+    return { client, Account, ID }
 })()
 
 export default server
